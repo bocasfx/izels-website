@@ -1,34 +1,72 @@
 html, body {
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'Sacramento', cursive;
   margin: 0;
-  overflow: hidden;
   height: 100%;
   background-color: mistyrose;
 }
 
-#myCanvas {
-  width: 100%;
-  height: 100%;
-}
-
 .header {
-  margin-top: 24px;
+  padding: 24px 0;
   width: 100%;
   font-size: 2em;
+  background-color: white;
+  border-bottom: 2px solid skyblue;
 }
 
-.drawing1 {
-  position: absolute;
-  z-index: 1;
-  top: 240px;
-  left: 0;
-  pointer-events: none;
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
 }
 
-.drawing2 {
-  position: absolute;
-  z-index: 1;
-  top: 240px;
-  left: 550px;
-  pointer-events: none;
+.controls {
+  padding: 16px;
+  width: 200px;
+}
+
+.canvas {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+#myCanvas {
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 5px 5px 8px #666;
+}
+
+.raster {
+  display: none;
+}
+
+.colorButton {
+  width: 32px;
+  height: 32px;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.purple {
+  background-color: purple;
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  #myCanvas {
+    box-shadow: none;
+  }
 }
