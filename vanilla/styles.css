@@ -5,6 +5,15 @@ html, body {
   background-color: white;
 }
 
+a, a:visited {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  color: mistyrose;
+}
+
 .main {
   display: flex;
   height: 100%;
@@ -12,24 +21,35 @@ html, body {
 
 ul {
   padding-inline-start: 16px;
+  margin-left: 16px;
 }
 
 li {
   list-style: none;
+  margin-bottom: 8px;
 }
 
 .menu {
-  width: 250px;
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #666;
+  width: 200px;
   height: 100%;
   border-right: 2px solid #ddd;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .header {
-  padding: 24px;
+  padding: 16px;
   width: 100%;
   font-size: 2em;
-  background-color: white;
-  border-bottom: 2px solid #ddd;
+  background-color: #555;
+  color: white;
+}
+
+.heart {
+  font-size: 0.5em;
+  margin-left: 8px;
 }
 
 .body {
@@ -73,10 +93,17 @@ li {
   border-radius: 50%;
   border: 3px solid white;
   outline: none;
+  margin-bottom: 16px;
 }
 
 .active {
   box-shadow: 3px 3px 5px #666;
+}
+
+.active::after {
+  font-size: 1.2em;
+  font-weight: bold;
+  content: '\2713';
 }
 
 .pink {
