@@ -2,33 +2,49 @@ html, body {
   font-family: 'Sacramento', cursive;
   margin: 0;
   height: 100%;
-  background-color: mistyrose;
+  background-color: white;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+ul {
+  padding-inline-start: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+.menu {
+  width: 250px;
+  height: 100%;
+  border-right: 2px solid #ddd;
 }
 
 .header {
-  padding: 24px 0;
+  padding: 24px;
   width: 100%;
   font-size: 2em;
   background-color: white;
-  border-bottom: 2px solid skyblue;
+  border-bottom: 2px solid #ddd;
 }
 
 .body {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 32px;
-}
-
-.controls {
-  padding: 16px;
-  width: 200px;
+  background-color: mistyrose;
+  background-image: 
+    radial-gradient(#ffefed 15%, transparent 16%),
+    radial-gradient(#ffefed 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
 }
 
 .canvas {
-  position: relative;
-  margin: 0 auto;
-  width: 800px;
-  height: 600px;
   display: flex;
   justify-content: center;
 }
@@ -38,15 +54,29 @@ html, body {
   height: 600px;
   background-color: white;
   box-shadow: 5px 5px 8px #666;
+  margin-top:48px;
 }
 
 .raster {
   display: none;
 }
 
+.controls {
+  width: 32px;
+  margin: 48px 16px 0;
+}
+
 .colorButton {
   width: 32px;
   height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  outline: none;
+}
+
+.active {
+  box-shadow: 3px 3px 5px #666;
 }
 
 .pink {
