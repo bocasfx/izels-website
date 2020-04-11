@@ -42,7 +42,7 @@ window.onload = function() {
     for (button of buttons) {
       button.classList.remove('active');
     };
-    var elem = document.getElementById(color);
+    var elem = document.getElementsByClassName(color)[0];
     if (!elem.classList.contains('active')) {
       elem.classList.add('active');
     }
