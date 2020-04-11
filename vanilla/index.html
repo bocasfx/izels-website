@@ -15,24 +15,25 @@
           </div>
           <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#">Bunny</a></li>
+            <li><a href="#" onclick="showSection('canvas', true, 'bunny')">Bunny</a></li>
             <li><a href="#">Sun</a></li>
             <li><a href="#">About</a></li>
             <!-- <li><a id="reset" href="#">Reset</a></li> -->
           </ul>
         </div>
-        
 
         <!-- Home -->
 
-        <!-- <section id="home">
+        <section class="home">
           <div class="title">Hi there!</div>
           <div>These are some drawings that I made!</div>
           <div>Have FUN! FUN! FUN! colouring them!</div>
           <div>Me and my daddy made this website, I hope you like it!</div>
-        </section> -->
+        </section>
 
-        <section id="canvas">
+        <!-- Home -->
+
+        <section class="canvas hidden">
           <div class="controls">
             <button class="colorButton pink active" onclick="colors.pink.init();"></button>
             <button class="colorButton purple" onclick="colors.purple.init();"></button>

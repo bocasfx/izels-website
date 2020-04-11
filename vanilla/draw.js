@@ -4,6 +4,7 @@ paper.install(window);
 
 var colorNames = ['pink', 'purple'];
 var colors = {};
+var showSection = null;
 
 window.onload = function() {
   paper.setup('myCanvas');
@@ -61,9 +62,15 @@ window.onload = function() {
       activateButton(color, this);
     }
   });
+
+  showSection = (section, isDrawing = false, drawing = null) => {
+    const elems = document.getElementsByTagName('section');
+    for(elem of elems) {
+      elem.classList.add('hidden');
+    }
+    const activeSection = document.getElementsByClassName(section)[0];
+    console.log(activeSection)
+    activeSection.classList.remove('hidden');
+  }
 }
 
-
-function showSection(section) {
-  console.log(section);
-}
