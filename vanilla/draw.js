@@ -2,26 +2,16 @@ paper.install(window);
 // Keep global references to both tools, so the HTML
 // links below can access them.
 
-var colorNames = ['pink', 'purple'];
-var colors = {};
-var showSection = null;
+const colorNames = ['pink', 'purple'];
+const colors = {};
+let showSection = null;
 
 window.onload = function() {
   paper.setup('myCanvas');
 
-  // document.getElementById('reset').onclick = function() {
-  //   paper.project.activeLayer.removeChildren();
-  //   paper.view.draw();
-  // }
+  let raster;
+  let path;
 
-  var raster = new Raster('bunny');
-  raster.position = view.center;
-  raster.on('load', function() {
-    raster.size = new Size(425, 550);
-    raster.opacity = 0.5;
-  });
-
-  var path;
   function onMouseDown(color) {
     return function eventHandler(event) {
       path = new Path({
@@ -71,6 +61,18 @@ window.onload = function() {
     const activeSection = document.getElementsByClassName(section)[0];
     console.log(activeSection)
     activeSection.classList.remove('hidden');
+
+    if (isDrawing) {
+      paper.project.activeLayer.removeChildren();
+      paper.view.draw();
+      raster = new Raster(drawing);
+      raster.position = view.center;
+      raster.on('load', function() {
+        raster.size = new Size(425, 550);
+        raster.opacity = 0.5;
+      });
+    }
+
   }
 }
 
