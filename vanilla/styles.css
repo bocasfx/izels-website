@@ -10,7 +10,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: darksalmon;
+  color: #ff7600;
 }
 
 .main {
@@ -95,16 +95,14 @@ li {
   border: 3px solid white;
   outline: none;
   margin-bottom: 16px;
-}
-
-.active {
-  box-shadow: 3px 3px 5px #666;
+  box-shadow: 2px 2px 3px #666;
 }
 
 .active::after {
   font-size: 1.2em;
   font-weight: bold;
   content: '\2713';
+  color: white;
 }
 
 .pink {

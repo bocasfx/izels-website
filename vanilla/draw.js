@@ -1,7 +1,9 @@
 paper.install(window);
 // Keep global references to both tools, so the HTML
 // links below can access them.
-var colorPink, colorPurple;
+
+var colorNames = ['pink', 'purple'];
+var colors = {};
 
 window.onload = function() {
   paper.setup('myCanvas');
@@ -11,7 +13,7 @@ window.onload = function() {
   //   paper.view.draw();
   // }
 
-  var raster = new Raster('sun');
+  var raster = new Raster('bunny');
   raster.position = view.center;
   raster.on('load', function() {
     raster.size = new Size(425, 550);
@@ -21,7 +23,6 @@ window.onload = function() {
   var path;
   function onMouseDown(color) {
     return function eventHandler(event) {
-      console.log(color)
       path = new Path({
         strokeWidth: 5,
         strokeCap: 'round',
@@ -38,7 +39,6 @@ window.onload = function() {
 
   function activateButton(color, self) {
     var buttons = document.getElementsByClassName('colorButton');
-    console.log(buttons)
     for (button of buttons) {
       button.classList.remove('active');
     };
@@ -49,17 +49,16 @@ window.onload = function() {
     self.activate();
   }
 
-  colorPink = new Tool();
-  colorPink.onMouseDown = onMouseDown('pink');
-  colorPink.onMouseDrag = onMouseDrag;
-  colorPink.init = function() {
-    activateButton('pink', this);
-  }
+  colorNames.forEach(color => {
+    colors[color] = null;
+  });
 
-  colorPurple = new Tool();
-  colorPurple.onMouseDown = onMouseDown('purple');
-  colorPurple.onMouseDrag = onMouseDrag;
-  colorPurple.init = function() {
-    activateButton('purple', this);
-  }
+  Object.keys(colors).forEach(color => {
+    colors[color] = new Tool();
+    colors[color].onMouseDown = onMouseDown(color);
+    colors[color].onMouseDrag = onMouseDrag;
+    colors[color].init = function() {
+      activateButton(color, this);
+    }
+  });
 }
