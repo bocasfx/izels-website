@@ -6,6 +6,11 @@ var colorPink, colorPurple;
 window.onload = function() {
   paper.setup('myCanvas');
 
+  // document.getElementById('reset').onclick = function() {
+  //   paper.project.activeLayer.removeChildren();
+  //   paper.view.draw();
+  // }
+
   var raster = new Raster('sun');
   raster.position = view.center;
   raster.on('load', function() {
@@ -57,11 +62,4 @@ window.onload = function() {
   colorPurple.init = function() {
     activateButton('purple', this);
   }
-
-  // clouds = new Tool();
-  // clouds.minDistance = 40;
-  // clouds.onMouseDown = onMouseDown('purple');
-  // clouds.onMouseDrag = function(event) {
-  //   path.arcTo(event.point);
-  // }
 }

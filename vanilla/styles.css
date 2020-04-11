@@ -1,5 +1,4 @@
 html, body {
-  font-family: 'Sacramento', cursive;
   margin: 0;
   height: 100%;
   background-color: white;
@@ -11,7 +10,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: mistyrose;
+  color: darksalmon;
 }
 
 .main {
@@ -30,21 +29,23 @@ li {
 }
 
 .menu {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Kaushan Script', cursive;
   color: #666;
-  width: 200px;
+  width: 300px;
   height: 100%;
-  border-right: 2px solid #ddd;
-  font-size: 1.2em;
   font-weight: bold;
+  margin-top: 72px;
+  font-size: 1.2em;
+}
+
+.menu ul {
+  font-size: 1.3em;
 }
 
 .header {
-  padding: 16px;
-  width: 100%;
-  font-size: 2em;
-  background-color: #555;
-  color: white;
+  font-family: 'Sacramento', cursive;
+  font-size: 4em;
+  color: #666;
 }
 
 .heart {
@@ -74,7 +75,7 @@ li {
   height: 600px;
   background-color: white;
   box-shadow: 5px 5px 8px #666;
-  margin-top:48px;
+  margin-top: 72px;
 }
 
 .raster {
@@ -83,7 +84,7 @@ li {
 
 .controls {
   width: 32px;
-  margin: 48px 16px 0;
+  margin: 72px 16px 0;
 }
 
 .colorButton {

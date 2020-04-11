@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Sacramento&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <div class="header">
-      <span>Izel</span>
-      <span class="heart">♥♥♥</span>
-    </div>
     <div class="main">
       <!-- <div class="header">
         <div>Hi there!</div>
@@ -16,19 +12,22 @@
 
         <div>Me and my daddy made this website, I hope you like it!</div>
       </div> -->
-      <div class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li>Drawings</li>
-          <ul>
-            <li><a href="#">Bunny</a></li>
-            <li><a href="#">Sun</a></li>
-          </ul>
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
+      
       <div class="body">
         <div class="canvas">
+          <div class="menu">
+            <div class="header">
+              <span>Izel</span>
+              <span class="heart">♥</span>
+            </div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Bunny</a></li>
+              <li><a href="#">Sun</a></li>
+              <li><a href="#">About</a></li>
+              <!-- <li><a id="reset" href="#">Reset</a></li> -->
+            </ul>
+          </div>
           <div class="controls">
             <button id="pink" class="colorButton pink active" onclick="colorPink.init();"></button>
             <button id="purple" class="colorButton purple" onclick="colorPurple.init();"></button>
