@@ -6,28 +6,33 @@
   </head>
   <body>
     <div class="main">
-      <!-- <div class="header">
-        <div>Hi there!</div>
-        <div>These are some drawings that I made! Have FUN! FUN! FUN! colouring them!</div>
-
-        <div>Me and my daddy made this website, I hope you like it!</div>
-      </div> -->
       
       <div class="body">
-        <div class="canvas">
-          <div class="menu">
-            <div class="header">
-              <span>Izel</span>
-              <span class="heart">♥</span>
-            </div>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Bunny</a></li>
-              <li><a href="#">Sun</a></li>
-              <li><a href="#">About</a></li>
-              <!-- <li><a id="reset" href="#">Reset</a></li> -->
-            </ul>
+        <div class="menu">
+          <div class="header">
+            <span>Izel</span>
+            <span class="heart">♥</span>
           </div>
+          <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#">Bunny</a></li>
+            <li><a href="#">Sun</a></li>
+            <li><a href="#">About</a></li>
+            <!-- <li><a id="reset" href="#">Reset</a></li> -->
+          </ul>
+        </div>
+        
+
+        <!-- Home -->
+
+        <!-- <section id="home">
+          <div class="title">Hi there!</div>
+          <div>These are some drawings that I made!</div>
+          <div>Have FUN! FUN! FUN! colouring them!</div>
+          <div>Me and my daddy made this website, I hope you like it!</div>
+        </section> -->
+
+        <section id="canvas">
           <div class="controls">
             <button class="colorButton pink active" onclick="colors.pink.init();"></button>
             <button class="colorButton purple" onclick="colors.purple.init();"></button>
@@ -35,8 +40,9 @@
           <canvas id="myCanvas" width="800" height="600"></canvas>
           <img id="bunny" class="raster" src="img/bunny.png" width="500">
           <img id="sun" class="raster" src="img/sun.png" width="500">
-        </div>
+        </section>
       </div>
+
     </div>
     <script type="text/javascript" src="paper-full.min.js"></script>
     <script type="text/javascript" canvas="myCanvas" src="draw.js"></script>

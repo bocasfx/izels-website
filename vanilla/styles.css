@@ -2,6 +2,8 @@ html, body {
   margin: 0;
   height: 100%;
   background-color: white;
+  font-family: 'Kaushan Script', cursive;
+  color: #666;
 }
 
 a, a:visited {
@@ -10,7 +12,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: #ff7600;
+  color: hotpink;
 }
 
 .main {
@@ -29,9 +31,7 @@ li {
 }
 
 .menu {
-  font-family: 'Kaushan Script', cursive;
-  color: #666;
-  width: 300px;
+  width: 250px;
   height: 100%;
   font-weight: bold;
   margin-top: 72px;
@@ -65,7 +65,7 @@ li {
   background-position: 0 0, 30px 30px;
 }
 
-.canvas {
+#canvas {
   display: flex;
   justify-content: center;
 }
@@ -76,6 +76,19 @@ li {
   background-color: white;
   box-shadow: 5px 5px 8px #666;
   margin-top: 72px;
+}
+
+#home {
+  width: 864px;
+  margin-top: 100px;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 24px;
+  color: hotpink;
 }
 
 .raster {
