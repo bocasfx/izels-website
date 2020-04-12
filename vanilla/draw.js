@@ -66,8 +66,9 @@ window.onload = function() {
       paper.project.activeLayer.removeChildren();
       paper.view.draw();
       raster = new Raster(drawing);
-      raster.position = view.center;
+      raster.opacity = 0;
       raster.on('load', function() {
+        raster.position = view.center;
         raster.size = new Size(425, 550);
         raster.opacity = 0.5;
       });

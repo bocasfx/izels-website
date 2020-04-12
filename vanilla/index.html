@@ -17,7 +17,7 @@
             <li><a href="#" onclick="showSection('home')">Home</a></li>
             <li><a href="#" onclick="showSection('canvas', true, 'bunny')">Bunny</a></li>
             <li><a href="#" onclick="showSection('canvas', true, 'sun')">Sun</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
             <!-- <li><a id="reset" href="#">Reset</a></li> -->
           </ul>
         </div>
@@ -25,13 +25,19 @@
         <!-- Home -->
 
         <section class="home">
-          <div class="title">Hi there!</div>
-          <div>These are some drawings that I made!</div>
-          <div>Have FUN! FUN! FUN! colouring them!</div>
-          <div>Me and my daddy made this website, I hope you like it!</div>
+          <div class="home-content">
+            <div class="home-text">
+              <div class="title">Hi there!</div>
+              <div>These are some drawings that I made!</div>
+              <div>Have FUN! FUN! FUN! colouring them!</div>
+              <div>Me and my daddy made this website!</div>
+              <div>I hope you like it!</div>
+            </div>
+            <div class="izel-y-papa"></div>
+          </div>
         </section>
 
-        <!-- Home -->
+        <!-- Canvas -->
 
         <section class="canvas hidden">
           <div class="controls">
@@ -41,6 +47,12 @@
           <canvas id="myCanvas" width="800" height="600"></canvas>
           <img id="bunny" class="raster" src="img/bunny.png" width="500">
           <img id="sun" class="raster" src="img/sun.png" width="500">
+        </section>
+
+        <!-- About -->
+
+        <section class="about hidden">
+          <div class="title">About me:</div>
         </section>
       </div>
 
