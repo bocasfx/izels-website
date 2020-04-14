@@ -2,7 +2,7 @@ paper.install(window);
 // Keep global references to both tools, so the HTML
 // links below can access them.
 
-const colorNames = ['pink', 'purple'];
+const colorNames = ['red', 'orange', 'yellow', 'green', 'blue'];
 const colors = {};
 let showSection = null;
 

@@ -151,12 +151,24 @@ li {
   color: white;
 }
 
-.pink {
-  background-color: pink;
+.red {
+  background-color: red;
 }
 
-.purple {
-  background-color: purple;
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
 }
 
 @media print {
