@@ -18,6 +18,7 @@ window.onload = function() {
         strokeWidth: 5,
         strokeCap: 'round',
         strokeColor: color,
+        opacity: 0.8,
       });
       path.add(event.point);
       path.insertBelow(raster);
