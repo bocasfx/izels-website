@@ -62,9 +62,12 @@ window.onload = function() {
     console.log(activeSection)
     activeSection.classList.remove('hidden');
 
-    if (isDrawing) {
+    if (section === 'canvas') {
       paper.project.activeLayer.removeChildren();
       paper.view.draw();
+    }
+
+    if (isDrawing) {
       raster = new Raster(drawing);
       raster.opacity = 0;
       raster.on('load', function() {
@@ -73,7 +76,5 @@ window.onload = function() {
         raster.opacity = 0.5;
       });
     }
-
   }
 }
-
