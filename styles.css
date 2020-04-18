@@ -39,6 +39,10 @@ li {
   margin-bottom: 8px;
 }
 
+section {
+  width: 864px;
+}
+
 .menu {
   width: 250px;
   height: 100%;
@@ -83,7 +87,6 @@ li {
 
 .home {
   /* text-align: center; */
-  width: 864px;
   margin-top: 100px;
   font-size: 1.5em;
   line-height: 2em;
@@ -111,8 +114,7 @@ li {
   background: url(img/izel-y-papa-forevers.jpg);
 }
 
-.about {
-  width: 864px;
+.about, .gallery {
   margin-top: 100px;
   font-size: 1.5em;
   line-height: 2em;
@@ -171,8 +173,32 @@ li {
   background-color: green;
 }
 
+.lightblue {
+  background-color: skyblue;
+}
+
 .blue {
   background-color: blue;
+}
+
+.violet {
+  background-color: violet;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
 }
 
 @media print {

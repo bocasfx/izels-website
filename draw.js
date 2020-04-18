@@ -2,7 +2,7 @@ paper.install(window);
 // Keep global references to both tools, so the HTML
 // links below can access them.
 
-const colorNames = ['red', 'orange', 'yellow', 'green', 'blue'];
+const colorNames = ['red', 'orange', 'yellow', 'green', 'lightblue', 'blue', 'violet', 'hotpink', 'brown', 'black', 'white'];
 const colors = {};
 let showSection = null;
 
@@ -13,12 +13,13 @@ window.onload = function() {
   let path;
 
   function onMouseDown(color) {
+    const opacity = color === 'white' ? 1 : 0.8;
     return function eventHandler(event) {
       path = new Path({
         strokeWidth: 5,
         strokeCap: 'round',
         strokeColor: color,
-        opacity: 0.8,
+        opacity,
       });
       path.add(event.point);
       path.insertBelow(raster);
