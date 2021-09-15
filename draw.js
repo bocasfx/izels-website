@@ -5,6 +5,7 @@ paper.install(window);
 const colorNames = ['red', 'orange', 'yellow', 'green', 'lightblue', 'blue', 'violet', 'hotpink', 'brown', 'black', 'white'];
 const colors = {};
 let showSection = null;
+let clear = null;
 
 window.onload = function() {
   paper.setup('myCanvas');
@@ -29,6 +30,11 @@ window.onload = function() {
   function onMouseDrag(event) {
     path.add(event.point);
   }
+
+  clear = () => {
+    paper.project.activeLayer.removeChildren();
+    paper.view.draw();
+  };
 
   function activateButton(color, self) {
     var buttons = document.getElementsByClassName('colorButton');
@@ -65,8 +71,7 @@ window.onload = function() {
     activeSection.classList.remove('hidden');
 
     if (section === 'canvas') {
-      paper.project.activeLayer.removeChildren();
-      paper.view.draw();
+      clear();
     }
 
     if (isDrawing) {
